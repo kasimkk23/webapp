@@ -7,5 +7,4 @@
 	  <hr class="my-4">
 	  <p>Users can create account and add their Blog posts. Which can be edited, deleted and users can see other users posts.</p>
 	</div>
-	<img src="web-application-testing.png">
 @endsection('content')

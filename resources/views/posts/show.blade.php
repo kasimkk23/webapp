@@ -4,21 +4,28 @@
 <br><br><br>
 <a href="/posts" class="btn btn-default"> Go Back </a>
 <h1>{{ $post->title }}</h1>
-<img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
-	<div>
-		{{ $post->body }}
+<div class="row">
+<div class="col-md-4 col-sm-4"><img src="/storage/cover_images/{{$post->cover_image}}"></div>
+<div class="col-md-8 col-sm-8">
+	{{ $post->body }}
+</div>
+</div>
+
+	<hr>
+	<div class="alert alert-info">
+  		Written on {{ $post->created_at }} by <strong>{{ $post->user->name }}</strong>
 	</div>
-	<hr>
-		<small>Written on {{ $post->created_at }} by {{ $post->user->name }}</small>
-	<hr>
 	@if(!Auth::guest())
 		@if(Auth::user()->id == $post->user_id)
-			<a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a>
-
+		<div class="row">
+			<div class="col-md-1">
+			<a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">Edit</a></div>
+			<div class="col-md-0">
 			{!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
 		                {{Form::hidden('_method', 'DELETE')}}
 		                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-		            {!!Form::close()!!}
+		            {!!Form::close()!!}</div>
+		</div>
 	    @endif
     @endif
 @endsection

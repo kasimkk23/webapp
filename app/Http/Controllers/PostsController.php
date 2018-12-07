@@ -51,7 +51,7 @@ class PostsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
-            'cover_image' => 'image|nullable|max:1999'
+            'cover_image' => 'nullable'
         ]);
         // Handle File Upload
         if($request->hasFile('cover_image')){
@@ -159,7 +159,7 @@ class PostsController extends Controller
         if(auth()->user()->id !==$post->user_id){
             return redirect('/posts')->with('error', 'Unauthorized Page');
         }
-        if($post->cover_image != 'noimage.jpg'){
+        if($post->cover_image != 'noimage.png'){
             // Delete Image
             Storage::delete('public/cover_images/'.$post->cover_image);
         }

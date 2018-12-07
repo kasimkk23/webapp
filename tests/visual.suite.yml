@@ -1,0 +1,12 @@
+actor: VisualTester
+modules:
+    enabled:
+        - \Helper\Visual
+        - WebDriver:
+            url: http://webapp
+            browser: chrome
+            port: 4444
+        - VisualCeption:
+            maximumDeviation: 0
+            saveCurrentImageIfFailure: true
+            report: true

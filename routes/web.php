@@ -17,6 +17,9 @@ Route::get('/services', 'PagesController@services');
 Route::resource('posts','PostsController');
 
 
+Route::get('/test', 'TestController@create')->name('test');
+Route::post('/test', 'TestController@store');
+
 
 
 
