@@ -17,6 +17,7 @@
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
         "codeception/codeception": "^2.5",
+        "codeception/stub": "^2.0",
         "codeception/visualception": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",

@@ -27,7 +27,7 @@
                                     </tr>
                                     @foreach($posts as $post)
                                         <tr>
-                                            <td><a href="/posts/{{ $post->id }}"><img class="img-thumbnail" style="width:auto;height:80px;"  src="/storage/cover_images/{{$post->cover_image}}"></a></td>
+                                            <td><a href="/posts/{{ $post->id }}"><img class="img-thumbnail" style="width:auto;height:80px;"  src="/storage/{{$post->cover_image}}"></a></td>
                                             <td><a href="/posts/{{ $post->id }}">{{$post->title}}</a></td>
                                             <td><a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a></td>
                                             <td>

@@ -5,7 +5,7 @@
 <a href="/posts" class="btn btn-default"> Go Back </a>
 <h1>{{ $post->title }}</h1>
 <div class="row">
-<div class="col-md-4 col-sm-4"><img src="/storage/cover_images/{{$post->cover_image}}"></div>
+<div class="col-md-4 col-sm-4"><img src="/storage/{{$post->cover_image}}"></div>
 <div class="col-md-8 col-sm-8">
 	{{ $post->body }}
 </div>

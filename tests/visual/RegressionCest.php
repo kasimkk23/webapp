@@ -47,7 +47,7 @@ class RegressionCest
 		$I->click("//form/input[@class='btn btn-primary']");
     	$I->amOnPage('/dashboard');
     	//$I->reloadIfElementNotFound()
-		$I->click("Kasim Films Subscription");
+		$I->click("Why do we it?");
 		$I->amOnPage('/dashboard');
 		$I->click("I am new post");
 		$I->click("//a[@class='btn btn-primary']"); //edit button

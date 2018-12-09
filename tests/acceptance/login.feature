@@ -28,7 +28,7 @@ Feature: login
   And I have filled the "title" field with "My first Vlogging Post"
   And I have filled the "body" field with "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
   When I click on the "Submit" button
-  Then I see the text "My TU Chemnitz Post"
+  Then I see the text "My first Vlogging Post"
 
   Given the "dashboard" page is opened
   And I see the text "My first Vlogging Post"
